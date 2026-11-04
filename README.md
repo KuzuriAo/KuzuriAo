@@ -4,13 +4,15 @@ I build tools for 3D printing and fix the problems I run into along the way. Mos
 
 [kuzuriao.com](https://kuzuriao.com)
 
-## bambu2orca
+## any2orca
 
-Converts Bambu Studio, Creality Print and Anycubic Slicer Next `.3mf` projects to Snapmaker U1 / OrcaSlicer, keeping as much of the original print settings as possible.
+Converts Bambu Studio, Creality Print and Anycubic Slicer Next `.3mf` projects for the Snapmaker U1, keeping the creator's settings, painted colors and every filament slot. It runs **entirely on your own machine**: your file is never uploaded.
 
-- **Web app:** [b2o.kuzuriao.com](https://b2o.kuzuriao.com), drag and drop
-- **CLI:** [b2o](https://github.com/KuzuriAo/b2o) (`npx @kuzuri.ao/b2o`), MIT licensed, for scripting and batches
-- **Privacy:** only the slicer settings ever leave your machine, never the 3D models. Run `--dry-run` to see exactly what would be sent.
+- **Web app:** [any2orca.com](https://any2orca.com), drag and drop, nothing to install
+- **CLI and library:** [any2orca](https://github.com/KuzuriAo/any2orca) (`npx any2orca convert model.3mf`), MIT licensed, for batches, scripting and your own code
+- **Presets and diffs:** apply your own print settings to other people's models, or see exactly what a creator changed from Snapmaker's stock profile
+
+It replaces bambu2orca / b2o.
 
 ## Snapmaker U1 contributions
 
@@ -31,12 +33,12 @@ All of them were tested on a U1 with the same collision test file, which is atta
 The clearance check depended on the order objects were listed in, and flagged material below the gantry rod as a collision.
 
 - [Snapmaker Orca #630](https://github.com/Snapmaker/OrcaSlicer/pull/630) and [#793](https://github.com/Snapmaker/OrcaSlicer/pull/793), also merged into a Snapmaker developer's dev branch ([#10](https://github.com/zackaree-shen/OrcaSlicer/pull/10))
-- Upstream: [OrcaSlicer #14987](https://github.com/OrcaSlicer/OrcaSlicer/pull/14987) (merged) and [#15544](https://github.com/OrcaSlicer/OrcaSlicer/pull/15544)
+- Upstream: [OrcaSlicer #14987](https://github.com/OrcaSlicer/OrcaSlicer/pull/14987) (merged), [#17217](https://github.com/OrcaSlicer/OrcaSlicer/pull/17217) (merged) and [#15544](https://github.com/OrcaSlicer/OrcaSlicer/pull/15544)
 
 ### macOS and opening projects
 
 - On macOS, models opened from Snapmaker Space were loaded and then thrown away: [Snapmaker Orca #852](https://github.com/Snapmaker/OrcaSlicer/pull/852) (merged)
 - The Home page stopped rendering in builds from `main`; I traced it to the macOS SDK the app was built with: [Snapmaker Orca #853](https://github.com/Snapmaker/OrcaSlicer/issues/853)
 - Projects opened from a link now open as projects, with their settings: [Snapmaker Orca #856](https://github.com/Snapmaker/OrcaSlicer/pull/856) · [OrcaSlicer #15652](https://github.com/OrcaSlicer/OrcaSlicer/pull/15652)
-- `orcaslicer://` links are no longer ignored when OrcaSlicer isn't already running: [OrcaSlicer #15735](https://github.com/OrcaSlicer/OrcaSlicer/pull/15735)
+- `orcaslicer://` links were ignored when OrcaSlicer wasn't already running: reproduction and log analysis in [OrcaSlicer #14602](https://github.com/OrcaSlicer/OrcaSlicer/issues/14602), fixed upstream in [#16769](https://github.com/OrcaSlicer/OrcaSlicer/pull/16769)
 - The command line no longer rejects every project file: [Snapmaker Orca #839](https://github.com/Snapmaker/OrcaSlicer/pull/839)
