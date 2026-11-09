@@ -22,7 +22,7 @@ The U1 could crash the toolhead into finished objects in print-by-object jobs in
 
 | Collision | Where it's fixed | PRs |
 |---|---|---|
-| Homing after the print | Slicer profile | [OrcaSlicer #13854](https://github.com/OrcaSlicer/OrcaSlicer/pull/13854) (merged) |
+| Homing after the print | Slicer profile | [OrcaSlicer #13854](https://github.com/OrcaSlicer/OrcaSlicer/pull/13854) and [#14066](https://github.com/OrcaSlicer/OrcaSlicer/pull/14066) (both merged) |
 | Tool changes | Slicer profile | [Snapmaker Orca #958](https://github.com/Snapmaker/OrcaSlicer/pull/958) (merged, in Snapmaker Orca 2.4.1) · [OrcaSlicer #16094](https://github.com/OrcaSlicer/OrcaSlicer/pull/16094) |
 | Pausing (the Pause button and spaghetti detection) | Firmware | [u1-klipper #17](https://github.com/Snapmaker/u1-klipper/pull/17) · [Extended Firmware #763](https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/pull/763) |
 
@@ -30,10 +30,10 @@ All of them were tested on a U1 with the same collision test file, which is atta
 
 ### Sequential printing
 
-The clearance check depended on the order objects were listed in, and flagged material below the gantry rod as a collision.
+The clearance check depended on the order objects were listed in, flagged material below the gantry rod as a collision, and measured objects without the raft under them.
 
 - [Snapmaker Orca #630](https://github.com/Snapmaker/OrcaSlicer/pull/630) and [#793](https://github.com/Snapmaker/OrcaSlicer/pull/793), also merged into a Snapmaker developer's dev branch ([#10](https://github.com/zackaree-shen/OrcaSlicer/pull/10))
-- Upstream: [OrcaSlicer #14987](https://github.com/OrcaSlicer/OrcaSlicer/pull/14987) (merged), [#15544](https://github.com/OrcaSlicer/OrcaSlicer/pull/15544) (merged) and [#17217](https://github.com/OrcaSlicer/OrcaSlicer/pull/17217) (merged)
+- Upstream, all merged: [OrcaSlicer #14987](https://github.com/OrcaSlicer/OrcaSlicer/pull/14987), [#15544](https://github.com/OrcaSlicer/OrcaSlicer/pull/15544), [#17217](https://github.com/OrcaSlicer/OrcaSlicer/pull/17217) and [#17235](https://github.com/OrcaSlicer/OrcaSlicer/pull/17235)
 
 ### macOS and opening projects
 
