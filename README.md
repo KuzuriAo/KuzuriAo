@@ -33,7 +33,8 @@ All of them were tested on a U1 with the same collision test file, which is atta
 The clearance check depended on the order objects were listed in, flagged material below the gantry rod as a collision, and measured objects without the raft under them.
 
 - [Snapmaker Orca #630](https://github.com/Snapmaker/OrcaSlicer/pull/630) and [#793](https://github.com/Snapmaker/OrcaSlicer/pull/793), also merged into a Snapmaker developer's dev branch ([#10](https://github.com/zackaree-shen/OrcaSlicer/pull/10))
-- Upstream, all merged: [OrcaSlicer #14987](https://github.com/OrcaSlicer/OrcaSlicer/pull/14987), [#15544](https://github.com/OrcaSlicer/OrcaSlicer/pull/15544), [#17217](https://github.com/OrcaSlicer/OrcaSlicer/pull/17217) and [#17235](https://github.com/OrcaSlicer/OrcaSlicer/pull/17235)
+- Upstream, all merged: [OrcaSlicer #14987](https://github.com/OrcaSlicer/OrcaSlicer/pull/14987), [#15544](https://github.com/OrcaSlicer/OrcaSlicer/pull/15544), [#17217](https://github.com/OrcaSlicer/OrcaSlicer/pull/17217), [#17235](https://github.com/OrcaSlicer/OrcaSlicer/pull/17235) and [#17445](https://github.com/OrcaSlicer/OrcaSlicer/pull/17445)
+- U1 profile, with the rod height and distance taken from Snapmaker's CAD values: [OrcaSlicer #17276](https://github.com/OrcaSlicer/OrcaSlicer/pull/17276) (merged) · [snapmaker-profiles #3](https://github.com/Snapmaker/snapmaker-profiles/pull/3) and [#4](https://github.com/Snapmaker/snapmaker-profiles/pull/4)
 
 ### macOS and opening projects
 
